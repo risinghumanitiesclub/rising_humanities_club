@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Rising Humanities Club</title>
+
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, 'SolaimanLipi', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; }
+
+        /* --- HEADER & NAV --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background: #fff;
+            position: relative;
+            z-index: 1000;
+        }
+.unity-image-box {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.unity-image-box img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.unity-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-section img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .logo-text h2 {
+            font-size: 20px;
+            color: #000;
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 11px;
+            color: #777;
+            margin: 0;
+        }
+
+        /* Hamburger Icon Styles */
+        .hamburger {
+            display: none; /* ডেস্কটপে লুকানো থাকবে */
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+padding-left:105px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #000;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        nav {
+            display: flex;
+            gap: 8px;
+        }
+
+        nav a {
+            color: #000;
+            background-color: #e6f542;
+            padding: 8px 14px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 13px;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d4e33a;
+        }
+
+        .active-nav {
+            background-color: #3fa9f5 !important;
+            color: #fff !important;
+        }
+
+        .nav-divider {
+            border: 0;
+            height: 2px;
+            background: #000;
+            margin: 0;
+        }
+
+        /* --- MAIN LAYOUT --- */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .left-panel { flex: 1; min-width: 280px; }
+        .info-card {
+            background: #fdfdfd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            border-top: 4px solid #e6f542;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: 0.3s;
+        }
+        .info-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.06); }
+        .card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 12px; }
+        .card-header img { width: 40px; height: 40px; border-radius: 5px; }
+        .card-header h3 { font-size: 18px; color: #000; }
+
+        .main-content { flex: 2; min-width: 350px; }
+        .main-content h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #000;
+            border-left: 5px solid #e6f542;
+            padding-left: 15px;
+        }
+
+        .right-sidebar {
+            flex: 1;
+            min-width: 280px;
+            background: #fcfcfc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+        .right-sidebar h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e6f542;
+            padding-bottom: 10px;
+        }
+        .advisor {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+        }
+        .advisor img {
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #e6f542;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* --- Responsive Design (Hamburger Menu Logic) --- */
+        @media (max-width: 900px) {
+            .hamburger {
+                display: flex; /* মোবাইলে হ্যামবার্গার আইকন দেখাবে */
+            }
+
+            nav {
+                display: none; /* মোবাইলে ডিফল্টভাবে মেনু লুকানো থাকবে */
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                gap: 15px;
+                text-align: center;
+            }
+
+            nav.active {
+                display: flex; /* বাটন ক্লিক করলে মেনু দেখাবে */
+            }
+
+            nav a {
+                width: 100%;
+            }
+
+            .container { flex-direction: column; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="logo.jpg" alt="Logo">
+        <div class="logo-text">
+            <h2>Rising Humanities Club</h2>
+            <p>Rajbari</p>
+        </div>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="activities.html">Activities</a>
+        <a href="contact.html">Contact</a>
+        <a href="admins.html">Admins</a>
+    </nav>
+</header>
+
+<hr class="nav-divider">
+
+<div class="container">
+    
+    <aside class="left-panel">
+        <div class="info-card">
+            <div class="card-header">
+                <img src="unity.jpg" alt="Unity">
+                <h3>Unity</h3>
+            </div>
+            <p>আমাদের ক্লাবের মূল শক্তি হলো একতা। সকল ছাত্রছাত্রী মিলেমিশে কাজ করার মাধ্যমেই আমরা বড় লক্ষ্য অর্জন করি।</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-header">
+                <img src="work.jpg" alt="Work">
+                <h3>Work</h3>
+            </div>
+            <p>আমরা বিশ্বাস করি পরিশ্রমেই সাফল্য। দক্ষতা উন্নয়ন এবং সামাজিক কাজে আমরা সবসময় সচেষ্ট ও নিবেদিতপ্রাণ।</p>
+        </div>
+
+        <div class="info-card">
+            <div class="card-header">
+                <img src="adv.jpg" alt="Advancement">
+                <h3>Advancement</h3>
+            </div>
+            <p>আধুনিক প্রযুক্তি এবং নেতৃত্বের গুণাবলী অর্জনের মাধ্যমে আমরা ভবিষ্যৎ প্রজন্মের জন্য নিজেদের গড়ে তুলছি।</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <h2>About Our Club</h2>
+        <p>Rising Humanities Club is a student-based organization. We focus on learning, skills, and leadership. আমাদের মূল লক্ষ্য রাজবাড়ী জেলার শিক্ষার্থীদের একটি প্ল্যাটফর্মে নিয়ে আসা যেখানে তারা পড়াশোনার পাশাপাশি সৃজনশীল কাজে নিজেদের নিয়োজিত করতে পারে।</p>
+        <p style="margin-top: 15px;">আমরা বিশ্বাস করি যে প্রতিটি শিক্ষার্থীর ভেতরে একটি সুপ্ত প্রতিভা থাকে। আমাদের ক্লাবের লক্ষ্য হলো সেই প্রতিভাকে বিকশিত করা এবং সুন্দর একটি সমাজ বিনির্মাণে ভূমিকা রাখা।</p>
+<div class="unity-image-box">
+    <img src="unity11.jpg" alt="Unity Image" id="unityImg">
+    <p class="unity-text">ঐক্যই আমাদের শক্তি — একতাই আমাদের বিকাশ, একতাই আমাদের সাফল্য।</p>
+</div>
+    </main>
+
+    <aside class="right-sidebar">
+        <h3>Advisors</h3>
+        
+        <div class="advisor">
+            <img src="azam.jpg" alt="Shorif Azam">
+            <h4>Shorif Azam</h4>
+            <p>Lecturer ICT, RGAMC</p>
+	    <p>Advisor, RHC</p>
+        </div>
+<div class="advisor">
+            <img src="arafat.jpg" alt="Shorif Azam">
+            <h4>Mahfuzur Rahman Arafat</h4>
+            <p>Junior Advisor, RHC</p>
+        </div>
+<div class="advisor">
+            <img src="jaber.jpg" alt="Shorif Azam">
+            <h4>Md Hossain Jaber</h4>
+            <p>Junior Advisor, RHC</p>
+        </div>
+      </aside>
+
+</div>
+
+<footer>© 2026 Rising Humanities Club • Developed by Arif & Labib. Built with ♥ for Humanities.</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+const img = document.getElementById('unityImg');
+
+img.addEventListener('mouseenter', () => {
+    img.style.transform = "scale(1.05)";
+    img.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
+});
+
+img.addEventListener('mouseleave', () => {
+    img.style.transform = "scale(1)";
+    img.style.boxShadow = "none";
+});
+
+</script>
+
+</body>
+</html>

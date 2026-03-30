@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rising Humanities Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo-section">
+                <img src="logo.jpg" alt="Logo" class="nav-logo"> 
+                <span class="brand-name">Rising Humanities Club</span>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="btn active">Home</a></li>
+                    <li><a href="about.html" class="btn">About</a></li>
+                    <li><a href="activities.html" class="btn">Activities</a></li>
+                    <li><a href="contact.html" class="btn">Contact</a></li>
+                    <li><a href="admins.html" class="btn">Admins</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <hr class="nav-divider">
+
+    <main class="hero-section">
+        <div class="center-content">
+            <img src="logo.jpg" alt="Rising Humanities Club Logo" class="main-logo">
+            <h1>RISING HUMANITIES CLUB</h1>
+            <p class="tagline">মানবিকের পথে স্বপ্ন দেখি</p>
+            <p class="tagline">জ্ঞান ও প্রচেষ্টায় দেশ গড়ি</p>
+        </div>
+    </main>
+
+    <section class="features-section">
+        <h2 class="section-title">আমাদের বৈশিষ্ট্যসমূহ</h2>
+        <div class="features-grid">
+            
+            <div class="feature-card border-green">
+                <h3>ঢাবি শিক্ষার্থীদের তত্ত্বাবধান</h3>
+                <p>আমাদের সকল কার্যক্রম ঢাকা বিশ্ববিদ্যালয়ের অভিজ্ঞ শিক্ষার্থীদের সরাসরি তত্ত্বাবধানে পরিচালিত হয়।</p>
+            </div>
+
+            <div class="feature-card border-blue">
+                <h3>একাডেমিক ও অ্যাডমিশন কম্বো</h3>
+                <p>এইচএসসি একাডেমিক সিলেবাসের পাশাপাশি বিশ্ববিদ্যালয় ভর্তি প্রস্তুতির পূর্ণাঙ্গ গাইডলাইন আমরা নিশ্চিত করি।</p>
+            </div>
+
+            <div class="feature-card border-yellow">
+                <h3>মানসম্মত লেকচার শিট</h3>
+                <p>জটিল বিষয়গুলোকে সহজ করার জন্য আমরা শিক্ষার্থীদের আধুনিক ও তথ্যবহুল লেকচার শিট প্রদান করি।</p>
+            </div>
+
+            <div class="feature-card border-orange">
+                <h3>ধারাবাহিক মূল্যায়ন</h3>
+                <p>সাপ্তাহিক ও মাসিক পরীক্ষার মাধ্যমে আমরা নিয়মিত শিক্ষার্থীদের মেধা যাচাই ও প্রয়োজনীয় ফিডব্যাক দেই।</p>
+            </div>
+
+            <div class="feature-card border-red">
+                <h3>ব্যক্তিগত কেয়ার</h3>
+                <p>প্রতিটি শিক্ষার্থীর আলাদা সমস্যা সমাধানে আমরা পার্সোনাল কেয়ার এবং ওয়ান-টু-ওয়ান গাইডলাইন দিয়ে থাকি।</p>
+            </div>
+
+            <div class="feature-card border-teal">
+                <h3>স্বপ্ন জয়ের সঠিক দিকনির্দেশনা</h3>
+                <p>উচ্চশিক্ষায় কাঙ্ক্ষিত লক্ষ্যে পৌঁছাতে মানবিক বিভাগের শিক্ষার্থীদের জন্য আমরা সেরা মেন্টরশিপ নিশ্চিত করি।</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Rising Humanities Club • Developed by Arif & Labib. Built with ♥ for Humanities.</p>
+    </footer>
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

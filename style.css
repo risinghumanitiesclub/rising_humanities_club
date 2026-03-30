@@ -1,0 +1,215 @@
+/* --- আপনার দেওয়া General Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+/* Navbar Section */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: #fff; /* নিশ্চিত করার জন্য */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 70px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+/* Button Styles */
+.btn {
+    text-decoration: none;
+    color: #000;
+    background-color: #e6f542; 
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-divider {
+    border: 0;
+    height: 2px;
+    background: #000;
+    margin: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 100px 20px;
+}
+
+.main-logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* --- নতুন যুক্ত করা: আমাদের বৈশিষ্ট্যসমূহ (Image 2 স্টাইল) --- */
+.features-section {
+    max-width: 1200px;
+    margin: 40px auto 80px auto; /* ফুটার থেকে দূরত্ব বজায় রাখতে */
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 28px;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: #e6f542;
+    bottom: -10px;
+    left: 20%;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07); /* ২য় ছবির মতো সফট শ্যাডো */
+    text-align: left; /* ২য় ছবির মতো টেক্সট বাম দিকে */
+    transition: transform 0.3s ease;
+    border-top: 6px solid #ccc; /* টপ বর্ডার ডিজাইন */
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.feature-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* কার্ডের বিভিন্ন বর্ডার কালার (আপনার দেওয়া ছবি অনুযায়ী) */
+.border-green  { border-top-color: #2ecc71; }
+.border-blue   { border-top-color: #3498db; }
+.border-yellow { border-top-color: #f1c40f; }
+.border-orange { border-top-color: #e67e22; }
+.border-red    { border-top-color: #e74c3c; }
+.border-teal   { border-top-color: #1abc9c; }
+
+/* Footer */
+footer {
+    padding: 40px 20px;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #666;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+/* --- Hamburger Menu & Responsive Styles --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #000;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 85px; /* লোগোর উচ্চতা অনুযায়ী অ্যাডজাস্ট করা */
+        left: 0;
+        background-color: #fff;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    .btn {
+        display: inline-block;
+        width: 180px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr; /* মোবাইলে একটি করে কার্ড দেখাবে */
+    }
+}

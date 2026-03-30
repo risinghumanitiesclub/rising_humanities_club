@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Rising Humanites Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, 'SolaimanLipi', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a { text-decoration: none; }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background: #fff;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-section img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .logo-text h2 {
+            font-size: 20px;
+            color: #000;
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 11px;
+            color: #777;
+            margin: 0;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            gap: 8px;
+        }
+
+        nav a {
+            color: #000;
+            background-color: #e6f542; /* থিম হলুদ */
+            padding: 8px 14px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 13px;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d4e33a;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+padding-left:105px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #000;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .nav-divider {
+            border: 0;
+            height: 2px;
+            background: #000;
+            margin: 0;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .contact-card {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            border-top: 5px solid #e6f542;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-card h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .contact-card p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn-contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+            background-color: #e6f542;
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            background-color: #d4e33a;
+            transform: translateY(-2px);
+        }
+
+        .btn-contact.fb { background-color: #1877F2; color: #fff; }
+        .btn-contact.mail { background-color: #ea4335; color: #fff; }
+
+        .location {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #777;
+            font-weight: bold;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #eee;
+            font-size: 13px;
+            color: #888;
+            background: #f9f9f9;
+        }
+
+        /* --- Responsive Design (Mobile) --- */
+        @media (max-width: 850px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                gap: 10px;
+                text-align: center;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="logo.jpg" alt="Logo">
+        <div class="logo-text">
+            <h2>Rising Humanities Club</h2>
+            <p>Rajbari</p>
+        </div>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="activities.html">Activities</a>
+        <a href="contact.html">Contact</a>
+        <a href="admins.html">Admins</a>
+    </nav>
+</header>
+
+<hr class="nav-divider">
+
+<main class="contact-container">
+    <div class="contact-card">
+        <h2>Contact Us</h2>
+        <p>আমাদের সাথে যোগাযোগ করতে নিচের মাধ্যমগুলো ব্যবহার করুন</p>
+        
+        <div class="contact-links">
+            <a href="https://www.facebook.com/risinghumanitiesclub" target="_blank" class="btn-contact fb">
+                <i class="fab fa-facebook-f"></i> Facebook Page
+            </a>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rhc121025@gmail.com" target="_blank" class="btn-contact mail">
+                <i class="fas fa-envelope"></i> Send Email
+            </a>
+        </div>
+
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i> Rajbari, Bangladesh
+        </div>
+    </div>
+</main>
+
+<footer>
+    © 2026 Rising Humanities Club • Developed by Arif & Labib. Built with ♥ for Humanities.
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
