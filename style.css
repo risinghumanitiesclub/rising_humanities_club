@@ -164,6 +164,7 @@ footer {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding-left:105px;
 }
 
 .bar {
