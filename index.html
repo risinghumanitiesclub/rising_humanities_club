@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+.w-l{
+	border-radius:100px;
+}
+
+    .container {
+      text-align: center;
+      color: white;
+      /* Container er width auto thakle typing animation er somoy bar-ti move korte pare, 
+         tai width fixed rakha bhalo */
+      width: fit-content; 
+    }
+
+    /* Logo */
+    .logo {
+      font-size: 60px;
+      margin-bottom: 10px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Typing text */
+    .typing {
+      font-size: 28px;
+      font-weight: bold;
+      border-right: 3px solid white;
+      width: 0;
+      margin: 0 auto; /* Text taakeo center e rakhar jonno */
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 2s steps(25) forwards, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* Subtitle */
+    .subtitle {
+      margin-top: 10px;
+      font-size: 16px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* --- LOADING BAR CENTERED --- */
+    .loader {
+      margin: 30px auto 0; /* Auto deyar fole bar-ti center e ashbe */
+      width: 250px;
+      height: 6px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      width: 0;
+      background: #38bdf8;
+      animation: load 4s linear forwards;
+    }
+
+    @keyframes load {
+      to { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo"><img src="logo.jpg"width="120"height="120"class="w-l"></div>
+
+    <div class="typing">
+      Welcome to Rising Humanities CLub
+    </div>
+
+    <div class="subtitle">
+      Supporting Students • Building Future
+    </div>
+
+    <div class="loader">
+      <div class="progress"></div>
+    </div>
+
+  </div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = "home.html"; // next page
+    }, 4000);
+  </script>
+
+</body>
+</html>
